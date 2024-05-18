@@ -28,4 +28,4 @@ const CardProduct = () => {
   )
 }
 
-export default CardProduct;
+export default CardProduct

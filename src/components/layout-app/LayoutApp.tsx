@@ -1,10 +1,13 @@
-import { Button, Layout } from "antd";
+import { Layout, Button } from "antd";
 import {
   Content,
   Footer,
   Header
 } from "antd/es/layout/layout";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { WarpointLogo } from "@/assets";
+import Search from "antd/es/input/Search";
+import { UserOutlined } from "@ant-design/icons";
 
 const LayoutApp = () => {
   return (
@@ -14,10 +17,18 @@ const LayoutApp = () => {
           backgroundColor: "#1b1b1b",
           display: 'flex',
           alignItems: 'center',
+          padding: '0 200px',
         }}
       >
-        <div className="demo-logo"/>
-        <Button type="primary">Зарегестрироваться</Button>
+        <WarpointLogo width={"156px"} />
+        <Button type="text" style={{color: "#FFFFFF"}}><UserOutlined />Личный кабинет</Button>
+        <Search
+          placeholder="Поиск"
+          allowClear
+          style={{
+            width: 200,
+          }}
+        />
       </Header>
       <Content
         style={{

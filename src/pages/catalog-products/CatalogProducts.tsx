@@ -8,4 +8,4 @@ const CatalogProducts = () => {
   )
 }
 
-export default CatalogProducts;
+export default CatalogProducts
