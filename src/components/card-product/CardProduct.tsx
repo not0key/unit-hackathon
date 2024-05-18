@@ -3,7 +3,13 @@ import Meta from "antd/es/card/Meta";
 import { useNavigate } from "react-router-dom";
 import { AppRoute } from "@/app/constants/AppRoute.ts";
 
-const CardProduct = () => {
+interface CardProduct {
+  image: string
+  title: string
+  price: number
+}
+
+const CardProduct = ({image, title, price}: CardProduct) => {
   const navigate = useNavigate()
 
   return(
@@ -17,13 +23,13 @@ const CardProduct = () => {
       cover={
         <img
           alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          src={image}
         />
       }
     >
       <Meta
-        title="Футболка Warpoint"
-        description="2990 рублей"
+        title={title}
+        description={price}
       />
     </Card>
   )

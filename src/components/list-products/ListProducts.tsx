@@ -1,7 +1,18 @@
 import { List } from "antd";
 import CardProduct from "../card-product/CardProduct.tsx";
+import { useAppDispatch, useAppSelector } from "@/app/hooks/redux-hooks.ts";
+import { getProducts } from "@/store/product-data/product-data.selector.ts";
+import { useEffect } from "react";
+import { fetchProducts } from "@/store/product-data/api-action.ts";
 
 const ListProducts = () => {
+  const dispatch = useAppDispatch()
+  const products = useAppSelector(getProducts)
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch])
+
   return(
     <div className="list-products-container">
       <List
@@ -19,10 +30,14 @@ const ListProducts = () => {
           position: 'bottom',
           align: 'start',
         }}
-        dataSource={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]}
-        renderItem={() => (
-          <List.Item>
-            <CardProduct/>
+        dataSource={products}
+        renderItem={(product) => (
+          <List.Item key={product.id}>
+            <CardProduct
+              image={product.image}
+              title={product.title}
+              price={product.price}
+            />
           </List.Item>
         )}
       />

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {fetchProductById, fetchProducts} from "@/store/product-data/api-action.ts";
-import {ProductsState} from "@/types/product-data.ts";
+import { fetchProductById, fetchProducts } from "@/store/product-data/api-action.ts";
+import { ProductsState } from "@/types/product-data.ts";
 
 const initialState: ProductsState = {
   products: [],
