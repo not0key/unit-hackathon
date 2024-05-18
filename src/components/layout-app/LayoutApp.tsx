@@ -34,7 +34,7 @@ const LayoutApp = () => {
         style={{
           height: "100vh",
           backgroundColor: "#1b1b1b",
-          padding: '0 48px',
+          padding: '0 120px',
         }}
       >
         <Outlet />
