@@ -1,17 +1,18 @@
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useNavigate } from "react-router-dom";
+import { AppRoute } from "@/app/constants/AppRoute.ts";
 
 const CardProduct = () => {
   const navigate = useNavigate()
 
   return(
     <Card
-      onClick={() => navigate('/')}
+      onClick={() => navigate(AppRoute.ABOUT_PRODUCT)}
       hoverable
       style={{
         textAlign: "center",
-        width: 300,
+        maxWidth: 300,
       }}
       cover={
         <img

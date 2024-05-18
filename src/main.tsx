@@ -4,11 +4,15 @@ import './index.scss'
 import 'antd/dist/reset.css'
 import App from "@/app/App.tsx"
 import { BrowserRouter } from "react-router-dom";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, theme } from "antd";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ConfigProvider>
+    <ConfigProvider
+      theme={{
+        algorithm: theme.darkAlgorithm,
+      }}
+    >
       <BrowserRouter>
         <App />
       </BrowserRouter>

@@ -1,6 +1,8 @@
 const FilterProducts = () => {
   return(
-    <></>
+    <div>
+      Здесь будут фильтры
+    </div>
   )
 }
 
