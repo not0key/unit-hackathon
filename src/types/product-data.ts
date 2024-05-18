@@ -1,5 +1,5 @@
 export type ProductData = {
-  id: string;
+  id: string
   title: string
   description: string
   price: number
@@ -10,9 +10,7 @@ export type ProductData = {
 type ProductDataKeys = keyof ProductData
 
 export type ProductDataById = {
-  id: string
-}& {
-  [Key in ProductDataKeys]: ProductData[Key];
+  [Key in ProductDataKeys]: ProductData[Key]
 }
 
 export type ProductsState = {
