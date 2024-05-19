@@ -10,5 +10,6 @@ COPY . .
 RUN npm run build
 
 # Определяем порт, который будет использоваться приложением
-EXPOSE 5050
+EXPOSE 3000
 CMD ["npm", "run", "dev"]
+

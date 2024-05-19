@@ -1,4 +1,6 @@
 import { Button, Modal, Input, Form } from "antd";
+import { useNavigate } from "react-router-dom";
+import { AppRoute } from "@/app/constants/AppRoute.ts";;
 
 interface SingInProps {
   open: boolean;
@@ -8,6 +10,8 @@ interface SingInProps {
 }
 
 const SingIn = ({ open, handleOk, handleCancel }: SingInProps) => {
+  const navigate = useNavigate()
+
   return(
     <Modal
       open={open}
@@ -61,6 +65,9 @@ const SingIn = ({ open, handleOk, handleCancel }: SingInProps) => {
         <Form.Item>
           <Button type="primary" htmlType="submit">
             Войти
+          </Button>
+          <Button type="text" onClick={() => navigate(AppRoute.AUTHORIZATION)}>
+            Регистрация
           </Button>
         </Form.Item>
       </Form>

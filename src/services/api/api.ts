@@ -4,7 +4,7 @@ const REQUEST_TIMEOUT = 5000
 
 export const createApi = (): AxiosInstance => {
   const api = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL,
+    baseURL: "http://51.250.92.221:5000/api",
     timeout: REQUEST_TIMEOUT,
   })
 

@@ -13,6 +13,10 @@ const ListProducts = () => {
     dispatch(fetchProducts())
   }, [dispatch])
 
+  useEffect(() => {
+    console.log("Products:", products);
+  }, [products])
+
   return(
     <div className="list-products-container">
       <List

@@ -12,10 +12,10 @@ const AppRouter = () => {
   return(
     <Suspense fallback={<div>Загрузка...</div>}>
       <Routes>
-        <Route path={AppRoute.AUTHORIZATION} element={<Authorization />} />
         <Route path="/" element={<LayoutApp />}>
           <Route path={AppRoute.CATALOG_PRODUCTS} element={<CatalogProducts />} />
           <Route path={AppRoute.ABOUT_PRODUCT} element={<AboutProduct />} />
+          <Route path={AppRoute.AUTHORIZATION} element={<Authorization />} />
         </Route>
       </Routes>
     </Suspense>

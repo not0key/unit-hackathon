@@ -1,5 +1,5 @@
 export enum AppRoute {
   CATALOG_PRODUCTS = "/",
-  AUTHORIZATION = "/authorization",
+  AUTHORIZATION = "/registration",
   ABOUT_PRODUCT = "/about"
 }
